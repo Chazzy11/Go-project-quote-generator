@@ -35,4 +35,3 @@ func generateCreditScore(w http.ResponseWriter, r *http.Request) {
 	}
 
 // create main function to create emdpoint and listen on port 8080
-
