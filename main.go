@@ -35,3 +35,13 @@ func generateCreditScore(w http.ResponseWriter, r *http.Request) {
 	}
 
 // create main function to create emdpoint and listen on port 8080
+
+
+func handleRequests() {
+	http.Handle("/credit_score", http.HandlerFunc(generateCreditScore))
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func main() {
+	handleRequests()
+}
