@@ -17,7 +17,7 @@ const creditScoreMax = 900
 // create struct for credit score data
 
 type credit_score struct {
-	Score int `json:"credit_score"`
+	CreditScore int `json:"credit_score"`
 }
 
 // create function to generate random credit score
@@ -26,7 +26,7 @@ type credit_score struct {
 
 func generateCreditScore(w http.ResponseWriter, r *http.Request) {
 	var creditScore = credit_score{
-		CreditScore: (rand.Intn(creditScoreMax-creditScoreMin) + creditScoreMin)
+		CreditScore: (rand.Intn(creditScoreMax-creditScoreMin) + creditScoreMin),
 	} 
 
 	w.WriteHeader(http.StatusOK)
