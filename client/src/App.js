@@ -1,11 +1,12 @@
 import './App.css';
+import QuoteGenerator from './QuoteGenerator';
 
 function App() {
   return (
     <div className="App">
       <main className="Quote-container">
         <div>
-          <h1>Hello</h1>
+          <QuoteGenerator />
         </div>
       </main>
     </div>
